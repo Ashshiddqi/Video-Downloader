@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    background: #111111;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid #222222;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    color: #888888;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.download-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #333333;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 15px;
+    background: #222222;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #4a9eff;
+    box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+}
+
+input[type="text"]::placeholder {
+    color: #666666;
+}
+
+.download-button {
+    padding: 15px 30px;
+    background: #4a9eff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    min-width: 130px;
+}
+
+.download-button:hover {
+    background: #3d8ae0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 158, 255, 0.2);
+}
+
+.download-button:active {
+    transform: translateY(0);
+}
+
+.status {
+    text-align: center;
+    margin: 20px 0;
+    color: #888888;
+    padding: 15px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    border: 1px solid #333333;
+}
+
+.result {
+    text-align: center;
+    margin: 20px 0;
+    padding: 25px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    border: 1px solid #333333;
+}
+
+.result p {
+    color: #888888;
+    margin-bottom: 15px;
+}
+
+.result a {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #4a9eff;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.result a:hover {
+    background: #3d8ae0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 158, 255, 0.2);
+}
+
+.supported-platforms {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #222222;
+    text-align: center;
+}
+
+.supported-platforms h3 {
+    color: #888888;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.supported-platforms ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.supported-platforms li {
+    color: #4a9eff;
+    font-weight: 600;
+    padding: 12px 25px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    border: 1px solid #333333;
+    transition: all 0.3s ease;
+}
+
+.supported-platforms li:hover {
+    border-color: #4a9eff;
+    transform: translateY(-2px);
+}
+
+.error {
+    color: #ff4a4a;
+    text-align: center;
+    margin: 15px 0;
+    padding: 15px;
+    background: rgba(255, 74, 74, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 74, 74, 0.2);
+}
+
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+
+    .download-form {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .download-button {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .supported-platforms ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .supported-platforms li {
+        width: 100%;
+    }
+}
